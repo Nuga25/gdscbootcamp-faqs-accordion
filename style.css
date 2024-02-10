@@ -1,0 +1,147 @@
+html, body {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: hsl(275, 100%, 97%);
+    font-family: 'Work Sans', sans-serif;
+}
+
+hr {
+    color: hsl(292, 16%, 49%);
+    opacity: 0.3;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+#container {
+    margin: auto;
+    width: 40%;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#container2 {
+    padding: 20px 20px 20px 20px;
+}
+
+.star-icon, .FAQs {
+    padding: 40px 10px 0px 20px;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.question-color {
+    color: hsl(292, 42%, 14%);
+    font-weight: 600;
+}
+
+.question-color:hover {
+    color: hsl(293, 51%, 43%);
+}
+
+.question-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-flex:hover {
+    cursor: pointer;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s ease;
+    color: hsl(292, 16%, 49%);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.icon-plus {
+    transition: transform 0.5s ease-in;
+}
+
+.faq.active .answer {
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+
+.faq .icon-minus{
+    display: none;
+}
+
+.faq.active .icon-plus {
+    display: none;
+}
+
+.faq.active .icon-minus {
+    display: inline-block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+footer {
+    margin-top: auto;
+}
+
+@media only screen and (max-width:1024px){
+    #container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width:785px){
+    #container {
+        width: 85%;
+    }
+    #container2 {
+        padding: 10px 10px 10px 10px;
+    }
+    .star-icon, .FAQs {
+        padding: 30px 5px 0px 5px;
+        font-size: 30px;
+    }
+    .answer {
+        font-size: 12px;
+    }
+    
+}
